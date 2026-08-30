@@ -1,0 +1,55 @@
+{
+    "server": {
+        "port": 3000,
+        "host": "0.0.0.0",
+        "environment": "production"
+    },
+    "security": {
+        "maxConsultationLength": 1000,
+        "rateLimit": {
+            "enabled": true,
+            "maxRequests": 100,
+            "windowMs": 60000
+        },
+        "cors": {
+            "enabled": true,
+            "origins": ["*"]
+        },
+        "helmet": {
+            "enabled": true
+        }
+    },
+    "engine": {
+        "maxHistorySize": 1000,
+        "memoryTimeout": 3600000,
+        "maxRecommendations": 6,
+        "confidenceThreshold": 0.3
+    },
+    "logging": {
+        "level": "info",
+        "enabled": true,
+        "console": true,
+        "file": false
+    },
+    "ui": {
+        "title": "🐍 Snek Security Mx",
+        "subtitle": "Asistente de seguridad con IA",
+        "theme": "dark",
+        "quickSuggestions": [
+            "¿Cómo proteger mi aplicación contra inyección SQL?",
+            "Recomendaciones de contraseñas seguras",
+            "¿Qué es OWASP Top 10?",
+            "Consejos de seguridad para desarrolladores",
+            "¿Cómo implementar Zero Trust?"
+        ]
+    },
+    "features": {
+        "riskLevel": true,
+        "recommendations": true,
+        "keywordDetection": true,
+        "profileDetection": true,
+        "contextDetection": true,
+        "sessionMemory": true,
+        "statistics": true
+    }
+}
